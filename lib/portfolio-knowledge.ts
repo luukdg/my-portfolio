@@ -9,6 +9,7 @@ I'm a front-end developer with a creative background. Pursuing a career in devel
 
 # Transition to development
 - Self-taught frontend developer learning besides a full-time job.
+- Started with the Odin Project, a full-stack curriculum that covers HTML, CSS, JavaScript. For a strong foundation in front-end development.
 - Focused on building projects using React, Next.js, and TypeScript to gain practical experience.
 
 # Technical skills
@@ -19,6 +20,10 @@ Adobe Creative Suite, Video editing, Motion Design, 3D modeling (Blender)
 
 # Projects
 - Guess the Grade (React, Vite, Firebase)
+- Personal Portfolio Website (Next.js, Personalized AI Chatbot)
+- Smoelenboek (React, SPFx, Microsoft Graph API)
+- Various smaller projects while learning through the Odin Project curriculum (HTML/CSS/JavaScript)
+- Discord Bot (Node.js, Discord.js) scraping and retrieving the Rocket League stats of users.
 
 # Fun facts
 - I am big fan of bouldering. I spend there mostly 3 times a week.

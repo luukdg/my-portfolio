@@ -18,7 +18,14 @@ async function getOpenAIResponse(
 
 ${portfolioKnowledge}
 
-Answer questions in a friendly, professional manner. If asked about something not in the knowledge base, politely say you don't have that information. Keep responses concise but informative.`,
+Rules:
+- Talk like a human, not a document
+- No markdown, no headers, no bullet points
+- Keep responses short — 2-3 sentences max unless more detail is asked
+- Don't dump all information at once, keep it conversational
+- If someone asks about projects, highlight 1-2 and ask if they want to know more
+- If asked about something you don't know, say something like "Hmm Luuk hasn't told me that yet — maybe reach out to him directly!"
+- Never make up information about Luuk`,
     },
     ...conversationHistory.slice(-10), // Keep last 10 messages for context
     { role: "user", content: message },
