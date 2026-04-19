@@ -1,13 +1,26 @@
+import Image from "next/image";
+import Chatbot from "@/components/ui/Chatbot";
+
 export function Welcome() {
   return (
-    <div className="flex flex-row pt-10">
-      <div className="flex flex-col items-center gap-3text-center sm:items-start sm:text-left w-full">
-        <h1 className="max-w-xs text-5xl font-bold leading-12 tracking-tight text-black dark:text-zinc-50">
-          Hi, I'm Luuk de Graaf
+    <div className="relative flex flex-row w-full sm:justify-center sm:items-center dark:bg-card dark:border-card border rounded-xl overflow-hidden">
+      <div className="flex flex-col gap-4 py-10 z-1 pl-5 items-start">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold whitespace-nowrap">
+          Hi, I'm Luuk <br /> de Graaf
         </h1>
-        <p className="text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-          An enthusiastic front-end developer with a creative background.
+        <p className="text-sm md:text-xl text-leading text-zinc-600 dark:text-zinc-400 tracking-tight whitespace-nowrap">
+          An enthusiastic <br className="block sm:hidden" /> front-end developer{" "}
+          <br /> with a creative background.
         </p>
+        <Chatbot />
+      </div>
+      <div className="absolute sm:relative h-72 w-55 md:w-72 md:h-96 -right-3 z-0 sm:z-auto">
+        <Image
+          src="/portret_color.png"
+          alt="Luuk de Graaf"
+          fill
+          className="object-top object-cover"
+        />
       </div>
     </div>
   );

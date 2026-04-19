@@ -73,12 +73,7 @@ export default function Chatbot() {
   return (
     <>
       {/* Floating Button */}
-      <Button
-        className=" flex items-center justify-center"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        Talk to me!
-      </Button>
+      <Button onClick={() => setIsOpen(!isOpen)}>Ask my AI anything 👋</Button>
       <Button
         className={`fixed bottom-6 right-6 z-50  w-16 h-16 sm:w-14 sm:h-14 bg-primary/50 rounded-full 
             flex items-center justify-center ${isOpen ? "hidden sm:flex" : "flex"}`}
@@ -91,7 +86,7 @@ export default function Chatbot() {
       {isOpen && (
         <div
           className="bg-card fixed bottom-0 left-0 right-0 h-[90vh] rounded-t-4xl sm:bottom-22
-        sm:right-4 sm:left-auto sm:w-96 sm:h-[600px] sm:rounded-4xl border border-border flex flex-col"
+        sm:right-4 sm:left-auto sm:w-96 sm:h-[600px] sm:rounded-4xl border border-border flex flex-col z-50"
         >
           {/* 👇 Header toevoegen */}
           <div className="flex items-center justify-between p-4 border-b border-border">
