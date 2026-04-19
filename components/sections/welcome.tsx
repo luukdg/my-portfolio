@@ -16,10 +16,10 @@ export function Welcome() {
       </div>
       <div className="absolute sm:relative h-72 w-55 md:w-72 md:h-96 -right-3 z-0 sm:z-auto">
         <Image
-          src="/portret_color.png"
+          src="/portret.jpg"
           alt="Luuk de Graaf"
           fill
-          className="object-top object-cover"
+          className="object-top object-cover rounded-full"
         />
       </div>
     </div>
