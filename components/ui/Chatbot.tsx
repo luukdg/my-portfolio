@@ -10,8 +10,12 @@ interface Message {
   content: string;
 }
 
-export default function Chatbot() {
-  const [isOpen, setIsOpen] = useState(false);
+interface ChatBotOpen {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen) {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
@@ -73,7 +77,6 @@ export default function Chatbot() {
   return (
     <>
       {/* Floating Button */}
-      <Button onClick={() => setIsOpen(!isOpen)}>Ask my AI anything 👋</Button>
       <Button
         className={`fixed bottom-6 right-6 z-50  w-16 h-16 sm:w-14 sm:h-14 bg-primary/50 rounded-full 
             flex items-center justify-center ${isOpen ? "hidden sm:flex" : "flex"}`}
