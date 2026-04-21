@@ -7,8 +7,8 @@ export function Contact() {
 
       <div className="flex flex-col gap-3 text-sm text-zinc-600 dark:text-zinc-400">
         <p>
-          Interested in working together or have a question? Feel free to reach
-          out.
+          I’m actively looking for a frontend developer role. If you think I
+          could be a fit for your team or project, I’d be happy to connect.
         </p>
 
         <a
@@ -20,13 +20,16 @@ export function Contact() {
 
         <div className="flex gap-3 pt-2">
           <Button asChild variant="outline">
-            <a href="https://github.com/yourname" target="_blank">
+            <a href="https://github.com/luukdg" target="_blank">
               GitHub
             </a>
           </Button>
 
           <Button asChild variant="outline">
-            <a href="https://linkedin.com/in/yourname" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/luuk-de-graaf/"
+              target="_blank"
+            >
               LinkedIn
             </a>
           </Button>
