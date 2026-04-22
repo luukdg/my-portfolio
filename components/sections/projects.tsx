@@ -9,8 +9,8 @@ import {
 } from "@/components/ui/card";
 import GithubIcon from "@/components/icons/githubIcon";
 import { ExternalLink } from "lucide-react";
-import { tagColors } from "../../data/tagColors";
 import { projects } from "../../data/projects";
+import { Badge } from "@/components/ui/badge";
 
 export function Projects() {
   return (
@@ -18,10 +18,7 @@ export function Projects() {
       <h1 className="text-2xl font-bold">Projects</h1>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {projects.map((project) => (
-          <Card
-            className="hover:scale-101 transition-transform"
-            key={project.title}
-          >
+          <Card key={project.title}>
             <Link href={`/projects/${project.slug}`}>
               <img
                 src={project.image || "/projects/default.jpg"}
@@ -51,12 +48,9 @@ export function Projects() {
             </CardContent>
             <CardFooter className="gap-2 flex-wrap">
               {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className={`text-xs px-2 py-1 rounded-md ${tagColors[tag] ?? "bg-muted text-muted-foreground"}`}
-                >
+                <Badge key={tag} variant="secondary">
                   {tag}
-                </span>
+                </Badge>
               ))}
             </CardFooter>
           </Card>
