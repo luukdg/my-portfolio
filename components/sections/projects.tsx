@@ -1,16 +1,7 @@
 import Link from "next/link";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
 import GithubIcon from "@/components/icons/githubIcon";
 import { ExternalLink } from "lucide-react";
 import { projects } from "../../data/projects";
-import { Badge } from "@/components/ui/badge";
 
 export function Projects() {
   return (

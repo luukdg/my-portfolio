@@ -1,15 +1,20 @@
-import Image from "next/image";
+import { JSX, useState } from "react";
 import { Button } from "../ui/button";
+import Chatbot from "../ui/Chatbot";
 
 interface WelcomeProps {
   isOpen: boolean;
   setIsChatbotOpen: (isOpen: boolean) => void;
+  pageLoading?: boolean;
 }
 
-export function Welcome({ isOpen, setIsChatbotOpen }: WelcomeProps) {
+export function Welcome({
+  isOpen,
+  setIsChatbotOpen,
+}: WelcomeProps): JSX.Element {
   return (
-    <div className="relative flex flex-row w-full rounded-xl items-center justify-between gap-10 pt-10">
-      <div className="flex flex-col gap-4 py-10 z-1 items-start">
+    <div className="relative flex flex-col w-full rounded-xl items-center justify-center gap-10 py-20">
+      <div className="flex flex-col gap-4 z-1 items-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold whitespace-nowrap">
           Hi, I'm Luuk <br className="block lg:hidden" /> de Graaf
         </h1>
@@ -17,23 +22,12 @@ export function Welcome({ isOpen, setIsChatbotOpen }: WelcomeProps) {
           An enthusiastic <br className="block lg:hidden" /> front-end developer{" "}
           <br className="block lg:hidden" /> with a creative background.
         </p>
-        <Button onClick={() => setIsChatbotOpen(!isOpen)}>
+        <Button className="sm:hidden" onClick={() => setIsChatbotOpen(!isOpen)}>
           Ask my AI anything 👋
         </Button>
       </div>
-      <div className="flex w-full h-full items-center justify-end pr-10 pb-10">
-        <div className="relative w-full max-w-[300px] aspect-square">
-          {/* Border (behind) */}
-          <div className="absolute left-5 top-5 w-full h-full border border-secondary-foreground rounded-xl z-0"></div>
-
-          {/* Image (on top) */}
-          <Image
-            src="/portret.jpg"
-            alt="Luuk de Graaf"
-            fill
-            className="object-top object-cover rounded-xl z-10"
-          />
-        </div>
+      <div className="w-3/4">
+        <Chatbot isOpen={isOpen} setIsOpen={setIsChatbotOpen} />
       </div>
     </div>
   );
