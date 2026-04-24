@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "./button";
 import { MessageCircle, X } from "lucide-react";
 import { useChat } from "@/hooks/useChat";
-import { ChatUI } from "./ChatUI";
+import { ChatUI } from "./chatUI";
 
 interface ChatBotOpen {
   isOpen: boolean;
@@ -19,15 +19,22 @@ export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
     },
   ]);
   const [input, setInput] = useState("");
-  const bottomRef = useRef<HTMLDivElement>(null!);
+  const [showFirstMessage, setShowFirstMessage] = useState(false);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, isLoading]);
+    const timer = setTimeout(() => {
+      setShowFirstMessage(true);
+    }, 2000); // 2.5 seconds delay
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSend = async () => {
-    await sendMessage(input);
+    const message = input;
+    if (!message) return;
+
     setInput("");
+    await sendMessage(message);
   };
 
   return (
@@ -53,7 +60,7 @@ export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
             input={input}
             setInput={setInput}
             handleSend={handleSend}
-            bottomRef={bottomRef}
+            showFirstMessage={showFirstMessage}
           />
         </div>
       )}
@@ -64,7 +71,7 @@ export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
           input={input}
           setInput={setInput}
           handleSend={handleSend}
-          bottomRef={bottomRef}
+          showFirstMessage={showFirstMessage}
         />
       </div>
     </>
