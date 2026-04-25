@@ -1,5 +1,5 @@
 const DotsBounceIcon = ({
-  size = undefined,
+  size = 20,
   color = "#000000",
   strokeWidth = 0,
   background = "transparent",

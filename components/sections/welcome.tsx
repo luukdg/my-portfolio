@@ -1,7 +1,6 @@
 import { JSX } from "react";
 import { Button } from "../ui/button";
 import Chatbot from "../ui/chatbot";
-import Image from "next/image";
 
 interface WelcomeProps {
   isOpen: boolean;

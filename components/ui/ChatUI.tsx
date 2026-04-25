@@ -50,7 +50,7 @@ export function ChatUI({
         {!showFirstMessage && (
           <div className="text-left">
             <div className="inline-flex rounded-2xl p-3 border border-border bg-primary/70 gap-2">
-              <DotsBounceIcon size={20} />
+              <DotsBounceIcon />
             </div>
           </div>
         )}
@@ -58,7 +58,7 @@ export function ChatUI({
         {isLoading && (
           <div className="text-left">
             <div className="inline-flex rounded-2xl p-3 border border-border bg-primary/70 gap-2">
-              <DotsBounceIcon size={20} />
+              <DotsBounceIcon />
             </div>
           </div>
         )}
