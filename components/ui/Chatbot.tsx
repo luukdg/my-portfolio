@@ -11,7 +11,7 @@ interface ChatBotOpen {
   setIsOpen: (isOpen: boolean) => void;
 }
 
-export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
+export function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
   const { messages, sendMessage, isLoading } = useChat([
     {
       role: "assistant",
