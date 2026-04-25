@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import Chatbot from "@/components/ui/Chatbot";
 
 interface WelcomeProps {
