@@ -11,7 +11,7 @@ export function NavBar({ className }: NavBarProps) {
       <div className="flex flex-row items-center gap-3">
         <ThemeToggle />
       </div>
-      <div className="flex flex-row gap-6 items-center">
+      <div className="flex flex-row gap-4 items-center sm:gap-6 text-sm sm:text-base">
         <p>Home</p>
         <p>About</p>
         <p>Projects</p>

@@ -16,7 +16,7 @@ export default async function ProjectPage({
   if (!project) return notFound();
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center dark:bg-black pb-16 sm:pb-20">
+    <div className="flex flex-col flex-1 items-center justify-center pb-16 sm:pb-20">
       <NavBar className="w-full flex flex-row justify-between max-w-7xl py-3 px-5 sm:px-16" />
 
       <div className="w-full max-w-7xl px-5 sm:px-16 pt-6">
@@ -28,7 +28,7 @@ export default async function ProjectPage({
         </Button>
       </div>
 
-      <main className="gap-10 flex flex-1 w-full max-w-7xl flex-col px-5 sm:px-16 bg-white dark:bg-black items-start">
+      <main className="gap-10 flex flex-1 w-full max-w-7xl flex-col px-5 sm:px-16 items-start">
         <div className="flex flex-col gap-4 pt-10">
           <h1 className="text-5xl font-bold">{project.title}</h1>
           <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl">

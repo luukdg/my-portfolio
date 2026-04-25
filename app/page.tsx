@@ -12,10 +12,10 @@ export default function Home() {
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center dark:bg-black pb-16 sm:pb-20">
+    <div className="flex flex-col flex-1 items-center justify-center pb-16 sm:pb-20">
       <NavBar className="w-full flex flex-row justify-between max-w-7xl py-3 px-5 pt-5 sm:px-16" />
       <Welcome isOpen={isChatbotOpen} setIsChatbotOpen={setIsChatbotOpen} />
-      <main className="gap-10 flex flex-1 w-full max-w-7xl flex-col items-center px-5 sm:px-16 pt-10 bg-white dark:bg-black sm:items-start">
+      <main className="gap-10 flex flex-1 w-full max-w-7xl flex-col items-center px-5 sm:px-16 pt-10 sm:items-start">
         <AboutMe />
         <Projects />
         <Resume />
