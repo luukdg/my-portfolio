@@ -1,6 +1,6 @@
 import { JSX } from "react";
 import { Button } from "../ui/button";
-import { Chatbot } from "@/components/ui/chatbot";
+import Chatbot from "@/components/ui/Chatbot";
 
 interface WelcomeProps {
   isOpen: boolean;
