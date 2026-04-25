@@ -41,7 +41,7 @@ export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
     <>
       {/* Floating Button */}
       <Button
-        className={`fixed bottom-6 right-6 z-50  w-16 h-16 sm:w-14 sm:h-14 bg-primary/50 rounded-full 
+        className={`fixed bottom-6 right-6 z-50  w-16 h-16 sm:w-14 sm:h-14 bg-primary rounded-full 
             flex items-center justify-center ${isOpen ? "hidden sm:flex" : "flex"}`}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -55,6 +55,7 @@ export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
         sm:right-4 sm:left-auto sm:w-96 sm:h-[600px] sm:rounded-4xl border border-border flex flex-col z-50"
         >
           <ChatUI
+            setIsOpen={setIsOpen}
             messages={messages}
             isLoading={isLoading}
             input={input}
@@ -64,8 +65,9 @@ export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
           />
         </div>
       )}
-      <div className="rounded-2xl border border-border flex flex-col w-full max-h-[600px] bg-card">
+      <div className="rounded-2xl border border-border flex flex-col w-full max-h-[600px] bg-card hidden sm:block">
         <ChatUI
+          setIsOpen={setIsOpen}
           messages={messages}
           isLoading={isLoading}
           input={input}

@@ -1,3 +1,4 @@
+import { MessageCircle, ChevronDown } from "lucide-react";
 import DotsBounceIcon from "./bouncingDots";
 import { Button } from "./button";
 
@@ -8,6 +9,7 @@ interface ChatUIProps {
   setInput: (value: string) => void;
   handleSend: () => void;
   showFirstMessage: boolean;
+  setIsOpen: (isOpen: boolean) => void;
 }
 
 export function ChatUI({
@@ -17,10 +19,20 @@ export function ChatUI({
   setInput,
   handleSend,
   showFirstMessage,
+  setIsOpen,
 }: ChatUIProps) {
   return (
     <>
       {/* Messages */}
+      <div className="flex items-center justify-between p-4 border-b border-border sm:hidden">
+        <div className="flex items-center gap-2">
+          <MessageCircle className="w-4 h-4" />
+          <span className="text-sm font-medium">Ask me anything</span>
+        </div>
+        <Button variant="ghost" onClick={() => setIsOpen(false)}>
+          <ChevronDown className="w-5 h-5" />
+        </Button>
+      </div>
       <div className="flex-1 overflow-y-auto p-4 space-y-4 h-full">
         {(showFirstMessage ? messages : messages.slice(1)).map(
           (message, index) => (

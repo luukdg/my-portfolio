@@ -1,6 +1,7 @@
 import { JSX } from "react";
 import { Button } from "../ui/button";
 import Chatbot from "../ui/chatbot";
+import Image from "next/image";
 
 interface WelcomeProps {
   isOpen: boolean;
@@ -13,15 +14,15 @@ export function Welcome({
   setIsChatbotOpen,
 }: WelcomeProps): JSX.Element {
   return (
-    <div className=" w-full h-[80svh] flex items-center justify-center">
-      <div className="relative flex flex-col w-full items-center sm:items-center justify-between gap-10 max-w-7xl sm:px-16 px-5">
-        <div className="flex flex-col gap-2 z-1 items-center">
-          <h1 className="text-7xl lg:text-8xl sm:text-7xl font-black whitespace-nowrap tracking-wide">
-            LUUK <br className="sm:hidden" /> DE GRAAF
+    <div className=" w-full h-[90svh] flex items-center justify-center">
+      <div className="relative flex flex-col w-full items-start sm:items-center justify-between gap-10 max-w-7xl sm:px-16 px-5">
+        <div className="flex flex-col gap-2 z-1 items-start sm:items-center">
+          <h1 className="text-5xl lg:text-9xl sm:text-7xl font-black  whitespace-nowrap tracking-wide">
+            LUUK <h1>DE GRAAF</h1>
           </h1>
-          <p className="text-sm md:text-xl text-leading tracking-tight whitespace-nowrap">
-            Hi I'm Luuk, a self-taught front-end developer with a background in
-            the creative industry.
+          <p className="text-sm sm:text-lg lg:text-xl text-leading tracking-tight whitespace-nowrap">
+            Hi I'm Luuk, a front-end developer <br className="sm:hidden" /> with
+            a background in the creative industry.
           </p>
           <Button
             className="sm:hidden"
@@ -29,7 +30,7 @@ export function Welcome({
           >
             Ask my AI anything 👋
           </Button>
-          <div className="hidden sm:block pt-10 relative w-full">
+          <div className="pt-10 relative w-full">
             <Chatbot isOpen={isOpen} setIsOpen={setIsChatbotOpen} />
           </div>
         </div>
