@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, X } from "lucide-react";
 import { useChat } from "@/hooks/useChat";
-import { ChatUI } from "@/components/ui/chatUI";
+import { ChatUI } from "@/components/ui/ChatUI";
 
 interface ChatBotOpen {
   isOpen: boolean;
