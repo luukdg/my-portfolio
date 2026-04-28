@@ -1,4 +1,6 @@
-export const projects = [
+import { Project } from "@/types/projectType";
+
+export const projects: Project[] = [
   {
     slug: "guess-the-grade",
     title: "Guess the Grade",

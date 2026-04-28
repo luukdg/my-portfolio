@@ -78,17 +78,6 @@
   --sidebar-accent-foreground: oklch(0.218 0.008 223.9);
   --sidebar-border: oklch(0.925 0.005 214.3);
   --sidebar-ring: oklch(0.723 0.014 214.4);
-  --color-lime-50: oklch(98.57% 0.036 124.23);
-  --color-lime-100: oklch(97.26% 0.07 125.09);
-  --color-lime-200: oklch(94.84% 0.136 126.7);
-  --color-lime-300: oklch(92.91% 0.192 128.06);
-  --color-lime-400: oklch(91.32% 0.232 130.13);
-  --color-lime-500: oklch(90.17% 0.253 132.6);
-  --color-lime-600: oklch(76.24% 0.213 132.47);
-  --color-lime-700: oklch(61.7% 0.171 132.03);
-  --color-lime-800: oklch(46.18% 0.127 131.53);
-  --color-lime-900: oklch(29.27% 0.078 129.47);
-  --color-lime-950: oklch(23.76% 0.063 129.09);
   --background: oklch(1 0 0);
   --foreground: oklch(0.148 0.004 228.8);
 }
@@ -137,5 +126,8 @@
   }
   html {
     @apply font-sans;
+  }
+  h2 {
+    @apply text-4xl font-black uppercase pb-5 tracking-wide;
   }
 }

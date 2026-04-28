@@ -1,6 +1,7 @@
 import { JSX } from "react";
 import { Button } from "@/components/ui/button";
 import Chatbot from "@/components/ui/Chatbot";
+import Image from "next/image";
 
 interface WelcomeProps {
   isOpen: boolean;
@@ -13,26 +14,28 @@ export function Welcome({
   setIsChatbotOpen,
 }: WelcomeProps): JSX.Element {
   return (
-    <div className=" w-full h-[90svh] flex items-center justify-center">
-      <div className="relative flex flex-col w-full items-start sm:items-center justify-between gap-10 max-w-7xl sm:px-16 px-5">
-        <div className="flex flex-col gap-2 z-1 items-start sm:items-center">
-          <h1 className="text-5xl lg:text-9xl sm:text-7xl font-black  whitespace-nowrap tracking-wide">
+    <div className=" w-full flex items-center justify-center py-40">
+      <div className="relative flex flex-col sm:flex-row w-full items-start justify-between gap-10 max-w-7xl sm:px-16 px-5">
+        <div className="flex flex-col gap-2 z-1 items-start">
+          <h1 className="text-5xl xl:text-9xl lg:text-8xl md:text-7xl font-black  whitespace-nowrap tracking-wide">
             LUUK <br />
             <strong className="">DE GRAAF</strong>
           </h1>
-          <p className="text-sm sm:text-lg lg:text-xl text-leading tracking-tight whitespace-nowrap">
+          <p className="text-sm xl:text-lg md:text-base  text-leading tracking-tight pb-2">
             Hi I'm Luuk, a front-end developer <br className="sm:hidden" /> with
             a background in the creative industry.
           </p>
-          <Button
-            className="sm:hidden"
-            onClick={() => setIsChatbotOpen(!isOpen)}
-          >
+          <Button className="" onClick={() => setIsChatbotOpen(!isOpen)}>
             Ask my AI anything 👋
           </Button>
-          <div className="pt-10 relative w-full">
-            <Chatbot isOpen={isOpen} setIsOpen={setIsChatbotOpen} />
-          </div>
+        </div>
+        <div className="relative w-full aspect-[1/1] rounded-full max-w-[300px] overflow-hidden border-5 border-primary/80 dark:border-foreground">
+          <Image
+            src="/portret.jpg"
+            alt="Luuk de Graaf"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
     </div>

@@ -1,64 +1,27 @@
 import Link from "next/link";
-import GithubIcon from "@/components/icons/githubIcon";
-import { ExternalLink } from "lucide-react";
-import { projects } from "../../data/projects";
+
+import { projects } from "@/data/projects";
+import { creative } from "@/data/creative";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ProjectLayout } from "@/components/ui/projectLayout";
 
 export function Projects() {
   return (
     <div className="w-full flex-col flex gap-6">
-      <h1 className="text-2xl font-bold">Projects</h1>
+      <Tabs defaultValue="development" className="w-full">
+        <h2>Projects</h2>
+        <TabsList className="mb-2" variant="line">
+          <TabsTrigger value="development">Development</TabsTrigger>
+          <TabsTrigger value="creative">Creative</TabsTrigger>
+        </TabsList>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        {projects.map((project) => (
-          <>
-            <div className="flex flex-col gap-5 pb-6">
-              <div className="rounded-xl overflow-hidden border-1 border-muted">
-                <Link href={`/projects/${project.slug}`}>
-                  <img
-                    src={project.image || "/projects/default.jpg"}
-                    alt="Event cover"
-                    className="relative aspect-video w-full object-cover bg-muted"
-                  />
-                </Link>
-              </div>
-              <div className="flex flex-col gap-3 sm:px-4">
-                <div className="flex flex-row justify-between">
-                  <h1 className="font-semibold text-xl">{project.title}</h1>
-                  <div className="flex flex-row items-center gap-3">
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    )}
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <GithubIcon />
-                    </a>
-                  </div>
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {project.description}
-                </div>
-
-                <Link
-                  href={`/projects/${project.slug}`}
-                  className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
-                >
-                  <span>Continue reading</span>
-                  <ExternalLink className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </>
-        ))}
-      </div>
+        <TabsContent value="development">
+          <ProjectLayout projects={projects} />
+        </TabsContent>
+        <TabsContent value="creative">
+          <ProjectLayout projects={creative} />
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }

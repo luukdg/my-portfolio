@@ -19,15 +19,6 @@ export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
     },
   ]);
   const [input, setInput] = useState("");
-  const [showFirstMessage, setShowFirstMessage] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowFirstMessage(true);
-    }, 2000); // 2.5 seconds delay
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleSend = async () => {
     const message = input;
@@ -61,21 +52,9 @@ export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
             input={input}
             setInput={setInput}
             handleSend={handleSend}
-            showFirstMessage={showFirstMessage}
           />
         </div>
       )}
-      <div className="rounded-2xl border border-border flex flex-col w-full max-h-[600px] bg-card hidden sm:block">
-        <ChatUI
-          setIsOpen={setIsOpen}
-          messages={messages}
-          isLoading={isLoading}
-          input={input}
-          setInput={setInput}
-          handleSend={handleSend}
-          showFirstMessage={showFirstMessage}
-        />
-      </div>
     </>
   );
 }

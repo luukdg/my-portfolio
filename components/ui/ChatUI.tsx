@@ -8,7 +8,6 @@ interface ChatUIProps {
   input: string;
   setInput: (value: string) => void;
   handleSend: () => void;
-  showFirstMessage: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }
 
@@ -18,13 +17,12 @@ export function ChatUI({
   input,
   setInput,
   handleSend,
-  showFirstMessage,
   setIsOpen,
 }: ChatUIProps) {
   return (
     <>
       {/* Messages */}
-      <div className="flex items-center justify-between p-4 border-b border-border sm:hidden">
+      <div className="flex items-center justify-between p-4 border-b border-border">
         <div className="flex items-center gap-2">
           <MessageCircle className="w-4 h-4" />
           <span className="text-sm font-medium">Ask me anything</span>
@@ -34,26 +32,16 @@ export function ChatUI({
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto p-4 space-y-4 h-full">
-        {(showFirstMessage ? messages : messages.slice(1)).map(
-          (message, index) => (
-            <div
-              key={index}
-              className={message.role === "user" ? "text-right" : "text-left"}
-            >
-              <div className="inline-block rounded-2xl p-3 border border-border bg-primary/70">
-                <p className="text-sm">{message.content}</p>
-              </div>
-            </div>
-          ),
-        )}
-
-        {!showFirstMessage && (
-          <div className="text-left">
-            <div className="inline-flex rounded-2xl p-3 border border-border bg-primary/70 gap-2">
-              <DotsBounceIcon />
+        {messages.map((message, index) => (
+          <div
+            key={index}
+            className={message.role === "user" ? "text-right" : "text-left"}
+          >
+            <div className="inline-block rounded-2xl p-3 border border-border bg-primary/70">
+              <p className="text-sm">{message.content}</p>
             </div>
           </div>
-        )}
+        ))}
 
         {isLoading && (
           <div className="text-left">
