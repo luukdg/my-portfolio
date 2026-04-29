@@ -2,6 +2,7 @@ import { MessageCircle, ChevronDown } from "lucide-react";
 import DotsBounceIcon from "./bouncingDots";
 import { Button } from "./button";
 import { motion } from "framer-motion";
+import { RefObject } from "react";
 
 interface ChatUIProps {
   messages: Array<{ role: string; content: string }>;
@@ -10,7 +11,7 @@ interface ChatUIProps {
   setInput: (value: string) => void;
   handleSend: () => void;
   setIsOpen: (isOpen: boolean) => void;
-  bottomRef: React.RefObject<HTMLDivElement>;
+  bottomRef: RefObject<HTMLDivElement | null>;
 }
 
 export function ChatUI({

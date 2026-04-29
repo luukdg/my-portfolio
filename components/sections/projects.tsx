@@ -5,7 +5,7 @@ import { ProjectLayout } from "@/components/ui/projectLayout";
 
 export function Projects() {
   return (
-    <div className="w-full flex-col flex gap-6">
+    <section id="projects" className="w-full flex-col flex gap-6">
       <Tabs defaultValue="development" className="w-full">
         <h2>Projects</h2>
         <TabsList className="mb-2" variant="line">
@@ -20,6 +20,6 @@ export function Projects() {
           <ProjectLayout projects={creative} />
         </TabsContent>
       </Tabs>
-    </div>
+    </section>
   );
 }

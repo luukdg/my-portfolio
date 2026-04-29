@@ -17,7 +17,7 @@ export default async function ProjectPage({
 
   return (
     <div className="flex flex-col flex-1 items-center justify-center pb-16 sm:pb-20">
-      <NavBar className="w-full flex flex-row justify-between max-w-7xl py-3 px-5 sm:px-16" />
+      <NavBar className="w-full flex flex-row justify-between max-w-7xl py-3 px-5 pt-5 sm:px-16" />
 
       <div className="w-full max-w-7xl px-5 sm:px-16 pt-6">
         <Button variant="ghost" asChild>

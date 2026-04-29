@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import { NavBar } from "@/components/sections/navbar";
 import { Welcome } from "@/components/sections/welcome";
 import { AboutMe } from "@/components/sections/aboutme";
@@ -7,8 +7,6 @@ import { Skills } from "@/components/sections/skills";
 import { Projects } from "@/components/sections/projects";
 import { Contact } from "@/components/sections/contact";
 import Chatbot from "@/components/ui/Chatbot";
-
-import { useState } from "react";
 
 export default function Home() {
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
