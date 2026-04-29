@@ -14,7 +14,7 @@ export function AboutMe() {
               After 8 years in the creative agency industry,
             </span>{" "}
             working on concepting, motion design, video production, and 3D, I
-            found myself wanting to build things that last — products and
+            found myself wanting to build things that last. Products and
             applications that people actually use every day. That's what led me
             to development.
           </p>
@@ -25,13 +25,13 @@ export function AboutMe() {
             <span className="text-foreground font-medium">
               HTML, CSS, JavaScript, React, TypeScript, and Next.js
             </span>
-            . Investing serious time and discipline alongside my full-time job —
-            and still enjoying it every day after 1.5 years — has only confirmed
+            . Investing serious time and discipline alongside my full-time job,
+            and still enjoying it every day after 1.5 years, has only confirmed
             my passion for development.
           </p>
 
           <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
-            Today, I'm looking for opportunities to keep growing, contribute to
+            Today I'm looking for opportunities to keep growing, contribute to
             meaningful projects, and bring together my{" "}
             <span className="text-foreground font-medium">
               creative and technical skills
