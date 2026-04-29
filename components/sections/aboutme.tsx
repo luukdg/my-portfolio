@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function AboutMe() {
   return (
-    <Card className="w-full mx-auto px-8 py-8">
+    <Card className="w-full mx-auto px-4 sm:px-8 py-8">
       <div className="flex gap-16 items-start w-full">
         {/* About text */}
         <div className="flex flex-col gap-6 flex-1">
