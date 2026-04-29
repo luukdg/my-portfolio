@@ -12,10 +12,10 @@ export function Contact() {
         </p>
 
         <a
-          href="mailto:yourname@email.com"
+          href="luukdg.developer@gmail.com"
           className="text-zinc-900 dark:text-zinc-100 font-medium underline underline-offset-4"
         >
-          yourname@email.com
+          luukdg.developer@gmail.com
         </a>
 
         <div className="flex gap-3 pt-2">

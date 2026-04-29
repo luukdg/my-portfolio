@@ -8,7 +8,7 @@ import { ChatUI } from "@/components/ui/ChatUI";
 import { Card } from "./card";
 import { AnimatePresence, motion } from "framer-motion";
 
-const MotionCard = motion(Card);
+const MotionCard = motion.create(Card);
 
 interface ChatBotOpen {
   isOpen: boolean;

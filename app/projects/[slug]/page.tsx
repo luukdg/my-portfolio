@@ -1,10 +1,13 @@
 import { projects } from "@/data/projects";
+import { creative } from "@/data/creative";
 import { notFound } from "next/navigation";
 import { NavBar } from "@/components/sections/navbar";
 import { ImageCarousel } from "@/components/ui/imageCarousel";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import GithubIcon from "@/components/icons/githubIcon";
 
 export default async function ProjectPage({
   params,
@@ -12,7 +15,7 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project = [...projects, ...creative].find((p) => p.slug === slug);
   if (!project) return notFound();
 
   return (
@@ -36,6 +39,7 @@ export default async function ProjectPage({
           </p>
 
           {/* Tags */}
+
           <div className="flex flex-wrap gap-2 pt-2">
             {project.tags.map((tag) => (
               <span
@@ -51,47 +55,71 @@ export default async function ProjectPage({
         {/* Content Sections */}
         <div className="flex flex-col gap-10 w-full max-w-3xl pt-6">
           {/* Demo */}
+
           <section className="flex flex-col gap-2 w-full max-w-3xl">
             <h3>Screenshots</h3>
-
             <div className="flex flex-row w-full">
               <ImageCarousel image={project.image} />
             </div>
-          </section>
-
-          {/* Problem */}
-          <section className="flex flex-col gap-2">
-            <h3>Problem</h3>
-            <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              {project.content.problem}
-            </p>
+            {project.github && (
+              <div className="flex flex-row items-center gap-3 mt-1">
+                {project.live && (
+                  <Button asChild variant="outline">
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live demo
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </Button>
+                )}
+                <Button asChild variant="outline">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Github repository
+                    <GithubIcon />
+                  </a>
+                </Button>
+              </div>
+            )}
           </section>
 
           {/* Solution */}
-          <section className="flex flex-col gap-2">
-            <h3>Solution</h3>
-            <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              {project.content.solution}
-            </p>
-          </section>
+          {project.content.concept && (
+            <section className="flex flex-col gap-2">
+              <h3>Concept</h3>
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                {project.content.concept}
+              </p>
+            </section>
+          )}
 
           {/* Features */}
-          <section className="flex flex-col gap-2">
-            <h3>Features</h3>
-            <ul className="list-disc pl-5 text-zinc-600 dark:text-zinc-400 space-y-1">
-              {project.content.features.map((feature) => (
-                <li key={feature}>{feature}</li>
-              ))}
-            </ul>
-          </section>
+          {project.content.features && (
+            <section className="flex flex-col gap-2">
+              <h3>Features</h3>
+              <ul className="list-disc pl-5 text-zinc-600 dark:text-zinc-400 space-y-1">
+                {project.content.features.map((feature) => (
+                  <li key={feature}>{feature}</li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           {/* Learnings */}
-          <section className="flex flex-col gap-2">
-            <h3>Learnings</h3>
-            <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              {project.content.learnings}
-            </p>
-          </section>
+          {project.content.learnings && (
+            <section className="flex flex-col gap-2">
+              <h3>Learnings</h3>
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                {project.content.learnings}
+              </p>
+            </section>
+          )}
         </div>
       </main>
     </div>

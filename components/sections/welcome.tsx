@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const MotionButton = motion(Button);
+const MotionButton = motion.create(Button);
 
 interface WelcomeProps {
   isOpen: boolean;
@@ -58,6 +58,7 @@ export function Welcome({
               src="/portret.jpg"
               alt="Luuk de Graaf"
               fill
+              sizes="(max-width: 640px) 66vw, 300px"
               className="object-cover"
             />
           </div>

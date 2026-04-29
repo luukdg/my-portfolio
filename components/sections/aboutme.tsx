@@ -1,4 +1,5 @@
-import { Card } from "../ui/card";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export function AboutMe() {
   return (
@@ -8,17 +9,17 @@ export function AboutMe() {
         <div className="flex flex-col gap-6 flex-1">
           <h2 className="p-0">About me</h2>
 
-          <p className="text-base leading-relaxed text-muted-foreground">
-            After{" "}
+          <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
             <span className="text-foreground font-medium">
-              8 years in the creative agency industry
-            </span>
-            , working on concepting, client communication, motion design, video
-            production, and 3D, I decided to pursue a career in development and
-            build digital products with long-term impact.
+              After 8 years in the creative agency industry,
+            </span>{" "}
+            working on concepting, motion design, video production, and 3D, I
+            found myself wanting to build things that last — products and
+            applications that people actually use every day. That's what led me
+            to development.
           </p>
 
-          <p className="text-base leading-relaxed text-muted-foreground">
+          <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
             Knowing it would be a long-term journey, I started with the
             fundamentals and gradually worked my way through{" "}
             <span className="text-foreground font-medium">
@@ -29,7 +30,7 @@ export function AboutMe() {
             my passion for development.
           </p>
 
-          <p className="text-base leading-relaxed text-muted-foreground">
+          <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
             Today, I'm looking for opportunities to keep growing, contribute to
             meaningful projects, and bring together my{" "}
             <span className="text-foreground font-medium">
@@ -37,6 +38,13 @@ export function AboutMe() {
             </span>
             .
           </p>
+          <div>
+            <Button asChild variant="outline">
+              <a href="/Resume - Luuk de Graaf.pdf" download>
+                Download resume
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </Card>

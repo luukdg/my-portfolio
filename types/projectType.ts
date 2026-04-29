@@ -7,8 +7,7 @@ export type Project = {
   github?: string;
   image?: string[];
   content: {
-    problem: string;
-    solution: string;
+    concept: string;
     features: string[];
     learnings: string;
   };

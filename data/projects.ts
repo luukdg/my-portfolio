@@ -18,16 +18,17 @@ export const projects: Project[] = [
     ],
 
     content: {
-      problem: "Climbers struggle to track progression and benchmark grades.",
-      solution:
-        "Built a PWA where users guess grades from videos and track stats over time.",
+      concept:
+        "As a climber, guessing a boulder's grade without trying it yourself is surprisingly hard. That idea sparked Guess the Grade — a game where you watch video clips of boulders and guess the grade. What started as a fun side project grew into a full-featured app over 6 months. Currently working on a daily boulder challenge (90% done), giving users a reason to come back every day.",
       features: [
-        "Video-based guessing system",
-        "Progress tracking",
-        "PWA install support",
+        "Watch video clips and guess the boulder grade",
+        "Personal progress and stat tracking",
+        "View and compare stats with other users",
+        "Google Authentication",
+        "Installable via Play Store as a PWA",
       ],
       learnings:
-        "Learned Firebase auth, realtime DB, and PWA caching strategies.",
+        "This project was my deep dive into React and Firebase. I learned how to structure a realtime database, implement Google Authentication, manage app state across components, and publish a PWA to the Play Store. It also taught me a lot about scoping a project — what started simple quickly grew into something much larger.",
     },
   },
 
@@ -40,11 +41,18 @@ export const projects: Project[] = [
     github: "https://github.com/luukdg/my-portfolio",
     image: ["/projects/portfolio.jpg"],
     content: {
-      problem: "Needed a way to showcase my work and personality.",
-      solution:
-        "Built a portfolio site with an AI chatbot for interactive introduction.",
-      features: ["AI chatbot", "Project showcase", "Responsive design"],
-      learnings: "Improved Next.js App Router and AI API integration.",
+      concept:
+        "Every developer needs a portfolio, but most feel static and impersonal. I wanted mine to feel different — so I built an AI chatbot directly into it. Instead of just reading about me, visitors can have an actual conversation and ask anything about my work, skills, or background. The site itself is also the project I'm most actively improving.",
+
+      features: [
+        "AI chatbot for interactive Q&A about me and my work",
+        "Project showcase with detailed case pages",
+        "Responsive design for all screen sizes",
+        "Dark mode support",
+      ],
+
+      learnings:
+        "Building this portfolio pushed me deeper into the Next.js App Router, TypeScript, and integrating external AI APIs. It also made me think more about UX and design — how to present yourself clearly and make a good first impression. It's an ongoing project that I keep refining.",
     },
   },
 
@@ -55,13 +63,22 @@ export const projects: Project[] = [
       "An SPFx web part integration for Teams, built to find colleagues within the organisation and share skills and ambitions.",
     tags: ["React", "SPFx", "Microsoft Graph API"],
     github: "https://github.com/luukdg/smoelenboek-react-spfx",
-    image: ["/projects/smoelenboek.png"],
+    image: [
+      "/projects/smoelenboek.jpg",
+      "/projects/smoelenboek/1.png",
+      "/projects/smoelenboek/2.png",
+    ],
     content: {
-      problem: "Hard to find colleagues and their skills in large orgs.",
-      solution:
-        "Built a Teams SPFx app to search employees and visualize skills.",
-      features: ["Teams integration", "Employee search", "Skill mapping"],
-      learnings: "Learned SPFx and Microsoft Graph API deeply.",
+      concept:
+        "In large organisations, finding the right colleague — let alone knowing their skills or ambitions — is harder than it should be. Smoelenboek is a SharePoint Framework (SPFx) web part integrated directly into Microsoft Teams, giving employees a way to search their organisation, discover colleagues, and share their own skills and ambitions.",
+      features: [
+        "Integrated directly into Microsoft Teams as an SPFx web part",
+        "Search and browse employees across the organisation",
+        "View and share personal skills and ambitions",
+        "Profile data pulled live via Microsoft Graph API",
+      ],
+      learnings:
+        "This project was my introduction to the Microsoft ecosystem. I learned how SPFx works within SharePoint and Teams, how to authenticate and query data using the Microsoft Graph API, and how to build enterprise-level tooling with React. It gave me a solid understanding of working within large, structured environments.",
     },
   },
 
@@ -82,11 +99,16 @@ export const projects: Project[] = [
       "/projects/odin/6.png",
     ],
     content: {
-      problem: "Learning fundamentals of frontend development.",
-      solution:
-        "Built multiple small apps to practice core JavaScript concepts.",
-      features: ["Weather App", "Todo App", "Calculator", "Tic Tac Toe"],
-      learnings: "Strong foundation in vanilla JS and DOM manipulation.",
+      concept:
+        "The Odin Project is where my development journey started. It's a free, open-source curriculum that teaches web development from the ground up. I worked through the full frontend track, building real projects along the way — not just reading about concepts, but actually applying them.",
+      features: [
+        "Weather App with live API data",
+        "Todo App with local storage",
+        "Fully functional Calculator",
+        "Tic Tac Toe with game logic",
+      ],
+      learnings:
+        "These projects gave me a strong foundation in HTML, CSS, and vanilla JavaScript. I learned DOM manipulation, event handling, API calls, and how to structure logic without frameworks. It's what everything I've built since is built on top of.",
     },
   },
 
@@ -97,12 +119,22 @@ export const projects: Project[] = [
       "A responsive landing page for a wedding, built with JavaScript and Tailwind CSS, with a message board.",
     tags: ["HTML", "CSS", "JavaScript", "Vite"],
     github: "https://github.com/luukdg/landing-page-wedding",
-    image: ["/projects/wedding.webp"],
+    image: [
+      "/projects/wedding.webp",
+      "/projects/wedding/1.png",
+      "/projects/wedding/2.png",
+    ],
     content: {
-      problem: "Needed a simple wedding RSVP + info page.",
-      solution: "Built a responsive landing page with guest messaging.",
-      features: ["RSVP section", "Message board", "Responsive design"],
-      learnings: "Improved UI structuring and vanilla JS interactions.",
+      concept:
+        "Built a website for my own wedding — a practical page where guests could find all the information they needed and RSVP. Designing something this personal made it extra fun to get right. The screenshots are blurred to keep the details private.",
+      features: [
+        "RSVP section for guest registration",
+        "Live message board for guest notes",
+        "Fully responsive across all devices",
+        "Smooth UI built with Tailwind CSS",
+      ],
+      learnings:
+        "Having a real deadline and real guests depending on the site taught me a lot about priorities — what actually matters to the end user versus what's nice to have. I also improved my skills in responsive layout design and handling dynamic content with vanilla JavaScript.",
     },
   },
 
@@ -115,10 +147,16 @@ export const projects: Project[] = [
     github: "https://github.com/luukdg/FlipReStat",
     image: ["/projects/discord.jpg", "/projects/discord/botdemo.gif"],
     content: {
-      problem: "Players wanted quick Rocket League stats inside Discord.",
-      solution: "Built a bot that fetches and displays player stats.",
-      features: ["Discord integration", "API scraping", "Commands system"],
-      learnings: "Learned Node.js bot development and API handling.",
+      concept:
+        "As a Rocket League player, I wanted a quick way to look up player stats without leaving Discord. So I built a bot that takes a username, scrapes the stats, and displays them directly in the chat — no browser needed.",
+      features: [
+        "Look up Rocket League stats by username",
+        "Stats displayed directly in Discord",
+        "Custom command system",
+        "Web scraping for live stat retrieval",
+      ],
+      learnings:
+        "This was my first Node.js project and introduction to bot development. I learned how Discord.js works, how to build a command system, and how to scrape and parse data from external sources. It was a great project for understanding how bots interact with APIs in real time.",
     },
   },
 ];
