@@ -1,3 +1,5 @@
+"use client";
+
 import { projects } from "@/data/projects";
 import { creative } from "@/data/creative";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -5,9 +7,7 @@ import { ProjectLayout } from "@/components/ui/projectLayout";
 import { useState, useEffect } from "react";
 
 export function Projects() {
-  const [tab, setTab] = useState(() => {
-    return localStorage.getItem("projectTab") ?? "development";
-  });
+  const [tab, setTab] = useState("development");
 
   useEffect(() => {
     const saved = localStorage.getItem("projectTab");
