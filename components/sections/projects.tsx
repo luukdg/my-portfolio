@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { projects } from "@/data/projects";
 import { creative } from "@/data/creative";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

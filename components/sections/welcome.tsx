@@ -2,6 +2,9 @@ import { JSX } from "react";
 import { Button } from "@/components/ui/button";
 import Chatbot from "@/components/ui/Chatbot";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const MotionButton = motion(Button);
 
 interface WelcomeProps {
   isOpen: boolean;
@@ -25,9 +28,24 @@ export function Welcome({
             Hi I'm Luuk, a front-end developer <br className="sm:hidden" /> with
             a background in the creative industry.
           </p>
-          <Button className="" onClick={() => setIsChatbotOpen(!isOpen)}>
-            Ask my AI anything 👋
-          </Button>
+          <MotionButton
+            initial="rest"
+            whileHover="hover"
+            animate="rest"
+            onClick={() => setIsChatbotOpen(!isOpen)}
+          >
+            Ask my AI anything{" "}
+            <motion.p
+              variants={{
+                rest: { rotate: 0 },
+                hover: { rotate: [0, -15, 15, -15, 15, -15, 15, 0] },
+              }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              style={{ display: "inline-block" }}
+            >
+              👋
+            </motion.p>
+          </MotionButton>
         </div>
         <div className="relative w-full aspect-[1/1] rounded-full max-w-[300px] overflow-hidden border-5 border-primary/80 dark:border-foreground">
           <Image

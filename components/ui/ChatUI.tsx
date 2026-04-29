@@ -1,6 +1,7 @@
 import { MessageCircle, ChevronDown } from "lucide-react";
 import DotsBounceIcon from "./bouncingDots";
 import { Button } from "./button";
+import { motion } from "framer-motion";
 
 interface ChatUIProps {
   messages: Array<{ role: string; content: string }>;
@@ -9,6 +10,7 @@ interface ChatUIProps {
   setInput: (value: string) => void;
   handleSend: () => void;
   setIsOpen: (isOpen: boolean) => void;
+  bottomRef: React.RefObject<HTMLDivElement>;
 }
 
 export function ChatUI({
@@ -18,11 +20,12 @@ export function ChatUI({
   setInput,
   handleSend,
   setIsOpen,
+  bottomRef,
 }: ChatUIProps) {
   return (
     <>
       {/* Messages */}
-      <div className="flex items-center justify-between p-4 border-b border-border">
+      <div className="flex items-center justify-between border-b border-border p-4">
         <div className="flex items-center gap-2">
           <MessageCircle className="w-4 h-4" />
           <span className="text-sm font-medium">Ask me anything</span>
@@ -37,9 +40,21 @@ export function ChatUI({
             key={index}
             className={message.role === "user" ? "text-right" : "text-left"}
           >
-            <div className="inline-block rounded-2xl p-3 border border-border bg-primary/70">
+            <motion.div
+              initial={{ opacity: 0, y: 8, scale: 0.92 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ type: "spring", stiffness: 500, damping: 35 }}
+              style={{
+                transformOrigin:
+                  message.role === "user" ? "bottom right" : "bottom left",
+              }}
+              className={`inline-block rounded-2xl p-3 border border-border 
+      bg-primary/70 max-w-[90%]
+      ${message.role === "user" ? "bg-secondary" : ""}`}
+            >
               <p className="text-sm">{message.content}</p>
-            </div>
+            </motion.div>
+            <div ref={bottomRef} />
           </div>
         ))}
 

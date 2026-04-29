@@ -2,6 +2,7 @@ import Link from "next/link";
 import GithubIcon from "@/components/icons/githubIcon";
 import { Project } from "@/types/projectType";
 import { ExternalLink } from "lucide-react";
+import { CrosshairCard } from "../animations/crosshais";
 
 export function ProjectLayout({ projects }: { projects: Project[] }) {
   return (
@@ -11,11 +12,13 @@ export function ProjectLayout({ projects }: { projects: Project[] }) {
           <div className="flex flex-col gap-5 pb-6">
             <div className="rounded-xl overflow-hidden border-1 border-muted">
               <Link href={`/projects/${project.slug}`}>
-                <img
-                  src={project.image || "/projects/default.jpg"}
-                  alt="Event cover"
-                  className="relative aspect-video w-full object-cover bg-muted"
-                />
+                <CrosshairCard>
+                  <img
+                    src={project.image || "/projects/default.jpg"}
+                    alt="Event cover"
+                    className="relative aspect-video w-full object-cover bg-muted"
+                  />
+                </CrosshairCard>
               </Link>
             </div>
             <div className="flex flex-col gap-3 sm:px-4">
