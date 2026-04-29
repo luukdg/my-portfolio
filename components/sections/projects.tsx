@@ -2,18 +2,22 @@ import { projects } from "@/data/projects";
 import { creative } from "@/data/creative";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ProjectLayout } from "@/components/ui/projectLayout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Projects() {
   const [tab, setTab] = useState(() => {
     return localStorage.getItem("projectTab") ?? "development";
   });
 
+  useEffect(() => {
+    const saved = localStorage.getItem("projectTab");
+    if (saved) setTab(saved);
+  }, []);
+
   function handleTabChange(value: string) {
     setTab(value);
     localStorage.setItem("projectTab", value);
   }
-
   return (
     <section id="projects" className="w-full flex-col flex gap-6">
       <Tabs value={tab} onValueChange={handleTabChange} className="w-full">

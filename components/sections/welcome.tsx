@@ -60,6 +60,7 @@ export function Welcome({
               fill
               sizes="(max-width: 640px) 66vw, 300px"
               className="object-cover"
+              priority
             />
           </div>
         </div>
