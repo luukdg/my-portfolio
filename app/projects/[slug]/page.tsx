@@ -1,7 +1,7 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import { NavBar } from "@/components/sections/navbar";
-import { Card } from "@/components/ui/card";
+import { ImageCarousel } from "@/components/ui/imageCarousel";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -52,22 +52,16 @@ export default async function ProjectPage({
         <div className="flex flex-col gap-10 w-full max-w-3xl pt-6">
           {/* Demo */}
           <section className="flex flex-col gap-2 w-full max-w-3xl">
-            <h2 className="text-2xl font-bold">Demo</h2>
+            <h3>Screenshots</h3>
 
-            <Card>
-              <div>
-                <img
-                  src={project.image}
-                  alt={`${project.title} demo preview`}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </Card>
+            <div className="flex flex-row w-full">
+              <ImageCarousel image={project.image} />
+            </div>
           </section>
 
           {/* Problem */}
           <section className="flex flex-col gap-2">
-            <h2 className="text-2xl font-bold">Problem</h2>
+            <h3>Problem</h3>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
               {project.content.problem}
             </p>
@@ -75,7 +69,7 @@ export default async function ProjectPage({
 
           {/* Solution */}
           <section className="flex flex-col gap-2">
-            <h2 className="text-2xl font-bold">Solution</h2>
+            <h3>Solution</h3>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
               {project.content.solution}
             </p>
@@ -83,7 +77,7 @@ export default async function ProjectPage({
 
           {/* Features */}
           <section className="flex flex-col gap-2">
-            <h2 className="text-2xl font-bold">Features</h2>
+            <h3>Features</h3>
             <ul className="list-disc pl-5 text-zinc-600 dark:text-zinc-400 space-y-1">
               {project.content.features.map((feature) => (
                 <li key={feature}>{feature}</li>
@@ -93,7 +87,7 @@ export default async function ProjectPage({
 
           {/* Learnings */}
           <section className="flex flex-col gap-2">
-            <h2 className="text-2xl font-bold">Learnings</h2>
+            <h3>Learnings</h3>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
               {project.content.learnings}
             </p>

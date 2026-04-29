@@ -130,4 +130,7 @@
   h2 {
     @apply text-4xl font-black uppercase pb-5 tracking-wide;
   }
+  h3 {
+    @apply text-2xl font-bold pb-5;
+  }
 }

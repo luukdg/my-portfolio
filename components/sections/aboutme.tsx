@@ -2,26 +2,41 @@ import { Card } from "../ui/card";
 
 export function AboutMe() {
   return (
-    <Card className="w-full mx-auto px-4">
-      <div className="flex gap-20 items-start w-full">
-        {/* Left — About Me */}
-        <div className="flex flex-col gap-4 flex-1">
-          <h2 className="">About me</h2>
-          <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            After 7 years in the creative industry, working on motion design,
-            video production, and 3D for clients like ING, Amazon, and
-            SkyShowtime, I decided to turn my passion for technology into a
-            career.
-          </p>
-          <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            I'm now a self-taught front-end developer, building projects with
-            React, Next.js, and TypeScript.
-          </p>
-          <div className="pt-2">
-            <span className="text-sm text-zinc-500">
-              Based in the Netherlands 🇳🇱
+    <Card className="w-full mx-auto px-8 py-8">
+      <div className="flex gap-16 items-start w-full">
+        {/* About text */}
+        <div className="flex flex-col gap-6 flex-1">
+          <h2 className="p-0">About me</h2>
+
+          <p className="text-base leading-relaxed text-muted-foreground">
+            After{" "}
+            <span className="text-foreground font-medium">
+              8 years in the creative agency industry
             </span>
-          </div>
+            , working on concepting, client communication, motion design, video
+            production, and 3D, I decided to pursue a career in development and
+            build digital products with long-term impact.
+          </p>
+
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Knowing it would be a long-term journey, I started with the
+            fundamentals and gradually worked my way through{" "}
+            <span className="text-foreground font-medium">
+              HTML, CSS, JavaScript, React, TypeScript, and Next.js
+            </span>
+            . Investing serious time and discipline alongside my full-time job —
+            and still enjoying it every day after 1.5 years — has only confirmed
+            my passion for development.
+          </p>
+
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Today, I'm looking for opportunities to keep growing, contribute to
+            meaningful projects, and bring together my{" "}
+            <span className="text-foreground font-medium">
+              creative and technical skills
+            </span>
+            .
+          </p>
         </div>
       </div>
     </Card>

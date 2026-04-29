@@ -49,9 +49,7 @@ export function ChatUI({
                 transformOrigin:
                   message.role === "user" ? "bottom right" : "bottom left",
               }}
-              className={`inline-block rounded-2xl p-3 border border-border 
-      bg-primary/70 max-w-[90%]
-      ${message.role === "user" ? "bg-secondary" : ""}`}
+              className={`inline-block rounded-2xl p-3 border border-border bg-primary/70 max-w-[90%] ${message.role === "user" ? "bg-secondary" : ""}`}
             >
               <p className="text-sm">{message.content}</p>
             </motion.div>
