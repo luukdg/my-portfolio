@@ -53,7 +53,7 @@ export function Welcome({
           </MotionButton>
         </div>
         <div className="w-full flex items-start justify-center sm:justify-end order-1 sm:order-2">
-          <div className="relative w-full aspect-[1/1] rounded-full max-w-2/3 sm:max-w-[300px] overflow-hidden border-5 border-primary/80 dark:border-foreground">
+          <div className="relative w-full aspect-[1/1] rounded-full max-w-2/3 sm:max-w-[300px] overflow-hidden sm:border-5 border-3 border-primary/80 dark:border-foreground">
             <Image
               src="/portret.jpg"
               alt="Luuk de Graaf"

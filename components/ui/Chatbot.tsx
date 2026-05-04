@@ -7,6 +7,7 @@ import { useChat } from "@/hooks/useChat";
 import { ChatUI } from "@/components/ui/ChatUI";
 import { Card } from "./card";
 import { AnimatePresence, motion } from "framer-motion";
+import { useChatBehavior } from "@/hooks/useChatBehavior";
 
 const MotionCard = motion.create(Card);
 
@@ -37,6 +38,8 @@ export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  useChatBehavior(isOpen, setIsOpen);
+
   return (
     <>
       <Button
@@ -59,7 +62,7 @@ export default function Chatbot({ isOpen, setIsOpen }: ChatBotOpen & {}) {
             }}
             transition={{ type: "spring", stiffness: 1000, damping: 50 }}
             style={{ transformOrigin: "bottom right" }} // 👈
-            className="pb-0 pt-0 fixed bottom-0 left-0 right-0 h-[90vh] sm:bottom-23
+            className="pb-0 pt-0 fixed bottom-0 left-0 right-0 h-[100svh] sm:bottom-23
     sm:right-5 sm:left-auto sm:w-96 sm:h-[600px] border border-border flex flex-col z-50 gap-0"
           >
             <ChatUI

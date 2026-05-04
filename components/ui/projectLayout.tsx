@@ -14,7 +14,7 @@ export function ProjectLayout({ projects }: { projects: Project[] }) {
               <Link href={`/projects/${project.slug}`}>
                 <CrosshairCard>
                   <img
-                    src={project.image?.[0] || "/projects/default.jpg"}
+                    src={project.image?.[0]?.src || "/projects/default.jpg"}
                     alt="Event cover"
                     className="relative aspect-video w-full object-cover object-top bg-muted"
                   />

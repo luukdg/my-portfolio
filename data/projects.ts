@@ -10,11 +10,11 @@ export const projects: Project[] = [
     live: "https://guess-the-grade-1a830.web.app/",
     github: "https://github.com/luukdg/guess-the-grade-react",
     image: [
-      "/projects/guessthegrade.jpg",
-      "/projects/grade/1.png",
-      "/projects/grade/2.png",
-      "/projects/grade/3.png",
-      "/projects/grade/4.png",
+      { type: "image", src: "/projects/guessthegrade.jpg" },
+      { type: "image", src: "/projects/grade/1.png" },
+      { type: "image", src: "/projects/grade/2.png" },
+      { type: "image", src: "/projects/grade/3.png" },
+      { type: "image", src: "/projects/grade/4.png" },
     ],
 
     content: {
@@ -39,7 +39,7 @@ export const projects: Project[] = [
       "Personal portfolio with an AI chatbot that can tell you more about me and my work.",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     github: "https://github.com/luukdg/my-portfolio",
-    image: ["/projects/portfolio.jpg"],
+    image: [{ type: "image", src: "/projects/portfolio.jpg" }],
     content: {
       concept:
         "Every developer needs a portfolio, but most feel static and impersonal. I wanted mine to feel different — so I built an AI chatbot directly into it. Instead of just reading about me, visitors can have an actual conversation and ask anything about my work, skills, or background. The site itself is also the project I'm most actively improving.",
@@ -64,9 +64,9 @@ export const projects: Project[] = [
     tags: ["React", "SPFx", "Microsoft Graph API"],
     github: "https://github.com/luukdg/smoelenboek-react-spfx",
     image: [
-      "/projects/smoelenboek.jpg",
-      "/projects/smoelenboek/1.png",
-      "/projects/smoelenboek/2.png",
+      { type: "image", src: "/projects/smoelenboek.jpg" },
+      { type: "image", src: "/projects/smoelenboek/1.png" },
+      { type: "image", src: "/projects/smoelenboek/2.png" },
     ],
     content: {
       concept:
@@ -90,13 +90,13 @@ export const projects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/luukdg/the-odin-project-portfolio",
     image: [
-      "/projects/odin.jpg",
-      "/projects/odin/1.png",
-      "/projects/odin/2.png",
-      "/projects/odin/3.png",
-      "/projects/odin/4.png",
-      "/projects/odin/5.png",
-      "/projects/odin/6.png",
+      { type: "image", src: "/projects/odin.jpg" },
+      { type: "image", src: "/projects/odin/1.png" },
+      { type: "image", src: "/projects/odin/2.png" },
+      { type: "image", src: "/projects/odin/3.png" },
+      { type: "image", src: "/projects/odin/4.png" },
+      { type: "image", src: "/projects/odin/5.png" },
+      { type: "image", src: "/projects/odin/6.png" },
     ],
     content: {
       concept:
@@ -120,9 +120,9 @@ export const projects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript", "Vite"],
     github: "https://github.com/luukdg/landing-page-wedding",
     image: [
-      "/projects/wedding.webp",
-      "/projects/wedding/1.png",
-      "/projects/wedding/2.png",
+      { type: "image", src: "/projects/wedding.webp" },
+      { type: "image", src: "/projects/wedding/1.png" },
+      { type: "image", src: "/projects/wedding/2.png" },
     ],
     content: {
       concept:
@@ -145,7 +145,10 @@ export const projects: Project[] = [
       "A Discord bot that scrapes and retrieves Rocket League stats for users.",
     tags: ["Node.js", "Discord.js"],
     github: "https://github.com/luukdg/FlipReStat",
-    image: ["/projects/discord.jpg", "/projects/discord/botdemo.gif"],
+    image: [
+      { type: "image", src: "/projects/discord.jpg" },
+      { type: "image", src: "/projects/discord/botdemo.gif" },
+    ],
     content: {
       concept:
         "As a Rocket League player, I wanted a quick way to look up player stats without leaving Discord. So I built a bot that takes a username, scrapes the stats, and displays them directly in the chat — no browser needed.",

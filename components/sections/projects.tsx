@@ -19,7 +19,7 @@ export function Projects() {
     localStorage.setItem("projectTab", value);
   }
   return (
-    <section id="projects" className="w-full flex-col flex gap-6">
+    <section id="projects" className="w-full flex-col flex gap-6 scroll-mt-10">
       <Tabs value={tab} onValueChange={handleTabChange} className="w-full">
         <h2>Projects</h2>
         <TabsList className="mb-2" variant="line">

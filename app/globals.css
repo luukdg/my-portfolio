@@ -134,3 +134,9 @@
     @apply text-2xl font-bold pb-5;
   }
 }
+
+@media (max-width: 639px) {
+  :root:has(.no-doc-scroll) {
+    overflow: hidden;
+  }
+}
