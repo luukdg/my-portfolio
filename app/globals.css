@@ -140,3 +140,5 @@
     overflow: hidden;
   }
 }
+
+@custom-variant hoverhoverable (@media (hover: hover));
