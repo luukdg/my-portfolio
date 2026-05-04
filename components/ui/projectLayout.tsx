@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import GithubIcon from "@/components/icons/githubIcon";
 import { Project } from "@/types/projectType";
 import { ExternalLink } from "lucide-react";
@@ -13,10 +14,12 @@ export function ProjectLayout({ projects }: { projects: Project[] }) {
             <div className="rounded-xl overflow-hidden border-1 border-muted">
               <Link href={`/projects/${project.slug}`}>
                 <CrosshairCard>
-                  <img
+                  <Image
                     src={project.image?.[0]?.src || "/projects/default.jpg"}
                     alt="Event cover"
-                    className="relative aspect-video w-full object-cover object-top bg-muted"
+                    width={640}
+                    height={360}
+                    className="aspect-video w-full object-cover object-top"
                   />
                 </CrosshairCard>
               </Link>

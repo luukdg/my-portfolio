@@ -5,7 +5,7 @@ export type Project = {
   tags: string[];
   live?: string;
   github?: string;
-  image?: { type: string; src: string }[];
+  image?: { type: string; src: string; blurUrl?: string }[];
   content: {
     concept: string;
     features: string[];
