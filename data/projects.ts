@@ -19,7 +19,7 @@ export const projects: Project[] = [
 
     content: {
       concept:
-        "As a climber, guessing a boulder's grade without trying it yourself is surprisingly hard. That idea sparked Guess the Grade — a game where you watch video clips of boulders and guess the grade. What started as a fun side project grew into a full-featured app over 6 months. Currently working on a daily boulder challenge (90% done), giving users a reason to come back every day.",
+        "As a climber, guessing a boulder's grade without trying it yourself is surprisingly hard. That idea sparked Guess the Grade, a game where you watch video clips of boulders and guess the grade. What started as a fun side project grew into a full-featured app over 6 months. Currently working on a daily boulder challenge (90% done), giving users a reason to come back every day.",
       features: [
         "Watch video clips and guess the boulder grade",
         "Personal progress and stat tracking",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     image: [{ type: "image", src: "/projects/portfolio.jpg" }],
     content: {
       concept:
-        "Every developer needs a portfolio, but most feel static and impersonal. I wanted mine to feel different — so I built an AI chatbot directly into it. Instead of just reading about me, visitors can have an actual conversation and ask anything about my work, skills, or background. The site itself is also the project I'm most actively improving.",
+        "With this project I tipped my toes into Next.js. I wanted to make a portfolio website to make my projects feel alive and showcase what I have done. A nice addition is the functionality to chat with my personalized AI chatbot.",
 
       features: [
         "AI chatbot for interactive Q&A about me and my work",
@@ -52,7 +52,7 @@ export const projects: Project[] = [
       ],
 
       learnings:
-        "Building this portfolio pushed me deeper into the Next.js App Router, TypeScript, and integrating external AI APIs. It also made me think more about UX and design — how to present yourself clearly and make a good first impression. It's an ongoing project that I keep refining.",
+        "Building this portfolio pushed me deeper into the Next.js App Router, TypeScript, and integrating external AI APIs. It taught me about SSR and CSR, and when to use to when. It also made me think more about UX and design, how to present yourself clearly and make a good first impression. It's an ongoing project that I keep refining.",
     },
   },
 
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     ],
     content: {
       concept:
-        "In large organisations, finding the right colleague — let alone knowing their skills or ambitions — is harder than it should be. Smoelenboek is a SharePoint Framework (SPFx) web part integrated directly into Microsoft Teams, giving employees a way to search their organisation, discover colleagues, and share their own skills and ambitions.",
+        "In large organisations, finding the right colleague, let alone knowing their skills or ambitions, is harder than it should be. Smoelenboek is a SharePoint Framework (SPFx) web part integrated directly into Microsoft Teams, giving employees a way to search their organisation, discover colleagues, and share their own skills and ambitions.",
       features: [
         "Integrated directly into Microsoft Teams as an SPFx web part",
         "Search and browse employees across the organisation",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     ],
     content: {
       concept:
-        "The Odin Project is where my development journey started. It's a free, open-source curriculum that teaches web development from the ground up. I worked through the full frontend track, building real projects along the way — not just reading about concepts, but actually applying them.",
+        "The Odin Project is where my development journey started. It's a free, open-source curriculum that teaches web development from the ground up. I worked through the full frontend track, building real projects along the way, not just reading about concepts, but actually applying them.",
       features: [
         "Weather App with live API data",
         "Todo App with local storage",
@@ -126,7 +126,7 @@ export const projects: Project[] = [
     ],
     content: {
       concept:
-        "Built a website for my own wedding — a practical page where guests could find all the information they needed and RSVP. Designing something this personal made it extra fun to get right. The screenshots are blurred to keep the details private.",
+        "Built a website for my own wedding. A practical page where guests could find all the information they needed and RSVP. Designing something this personal made it extra fun to get right. The screenshots are blurred and the names are different to keep the details private.",
       features: [
         "RSVP section for guest registration",
         "Live message board for guest notes",
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     title: "Discord Bot",
     description:
       "A Discord bot that scrapes and retrieves Rocket League stats for users.",
-    tags: ["Node.js", "Discord.js"],
+    tags: ["Python", "Discord.py"],
     github: "https://github.com/luukdg/FlipReStat",
     image: [
       { type: "image", src: "/projects/discord.jpg" },
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     ],
     content: {
       concept:
-        "As a Rocket League player, I wanted a quick way to look up player stats without leaving Discord. So I built a bot that takes a username, scrapes the stats, and displays them directly in the chat — no browser needed.",
+        "As a Rocket League player, I wanted a quick way to look up player stats without leaving Discord. So I built a bot that takes a username, scrapes the stats, and displays them directly in the chat.",
       features: [
         "Look up Rocket League stats by username",
         "Stats displayed directly in Discord",
@@ -159,7 +159,7 @@ export const projects: Project[] = [
         "Web scraping for live stat retrieval",
       ],
       learnings:
-        "This was my first Node.js project and introduction to bot development. I learned how Discord.js works, how to build a command system, and how to scrape and parse data from external sources. It was a great project for understanding how bots interact with APIs in real time.",
+        "This was my first real programming project. It was built with the support of AI and became my first introduction to both programming and the possibilities of software development.",
     },
   },
 ];

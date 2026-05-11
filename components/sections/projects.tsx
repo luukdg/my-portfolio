@@ -23,8 +23,12 @@ export function Projects() {
       <Tabs value={tab} onValueChange={handleTabChange} className="w-full">
         <h2>Projects</h2>
         <TabsList className="mb-2" variant="line">
-          <TabsTrigger value="development">Development</TabsTrigger>
-          <TabsTrigger value="creative">Creative</TabsTrigger>
+          <TabsTrigger className="cursor-pointer" value="development">
+            Development
+          </TabsTrigger>
+          <TabsTrigger className="cursor-pointer" value="creative">
+            Creative
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="development">
