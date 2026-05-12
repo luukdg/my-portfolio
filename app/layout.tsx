@@ -23,9 +23,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Luuk de Graaf",
-  description: "Personal portfolio of Luuk de Graaf",
+export const metadata = {
+  title: "Luuk de Graaf – Front-end Developer",
+  description:
+    "Portfolio van Luuk de Graaf. Front-end developer met focus op React, Next.js en creatieve digitale ervaringen.",
 };
 
 export default function RootLayout({
