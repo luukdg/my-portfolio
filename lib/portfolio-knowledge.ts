@@ -49,6 +49,20 @@ A collection of smaller learning projects including a Weather App, Todo App, Cal
 ## Discord Bot
 One of my first programming projects: a Discord bot that retrieves Rocket League player stats through scraping and displays them directly in Discord.
 
+## Smart Home Dashboard
+A custom smart home dashboard built with Next.js for my wall-mounted Samsung Galaxy Tab A8 running Home Kiosk. The application is hosted on a Raspberry Pi using Docker Compose and integrates multiple external APIs into a single interface.
+
+Features include:
+- Live weather forecast
+- Shared Google Calendar integration
+- Front door security camera feed
+- Jellyfin server activity and recently added movies & series
+- Tado smart thermostat temperatures
+- HomeWizard live electricity and gas usage
+- Garbage collection schedule
+
+The dashboard uses client-side polling with React's useEffect hook and periodic fetch requests to keep widgets up to date without requiring a full page refresh. Although similar functionality could have been achieved with Home Assistant, I intentionally built everything from scratch to deepen my understanding of Next.js, asynchronous data fetching, API integrations, Docker, and application architecture while creating a dashboard that is fully tailored to my own needs.
+
 # Personality & interests
 - Curious and highly motivated to keep learning.
 - Enjoys combining creativity with technology.

@@ -25,9 +25,9 @@ export function ProjectLayout({ projects }: { projects: Project[] }) {
           </div>
           <div className="flex flex-col gap-3 sm:px-4">
             <div className="flex flex-row justify-between">
-              <h3 className="font-semibold text-xl">{project.title}</h3>
+              <h3 className="font-semibold text-xl p-0">{project.title}</h3>
               {project.github && (
-                <div className="flex flex-row items-center gap-3">
+                <div className="flex flex-row items-start gap-3">
                   {project.live && (
                     <a
                       href={project.live}

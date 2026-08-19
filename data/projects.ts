@@ -2,6 +2,38 @@ import { Project } from "@/types/projectType";
 
 export const projects: Project[] = [
   {
+    slug: "home-dashboard",
+    title: "Smart Home Dashboard",
+    description:
+      "A custom-built smart home dashboard for my Galaxy Tab A8, powered by Next.js and hosted on a Raspberry Pi using Docker Compose.",
+    tags: ["Next.js", "TypeScript", "Docker"],
+    github: "https://github.com/luukdg/thuis-dash",
+    image: [
+      { type: "image", src: "/projects/dashboard.jpg" },
+      { type: "image", src: "/projects/dashboard/dashboard_2.jpg" },
+    ],
+
+    content: {
+      concept:
+        "I wanted a home dashboard that was completely tailored to my own needs instead of relying on an existing solution like Home Assistant. I built a custom dashboard for my Galaxy Tab A8 running Home Kiosk, while the application itself is hosted on my Raspberry Pi using Docker Compose. Building everything from scratch gave me complete control over both the design and the functionality, while also being a great way to improve my Next.js and API integration skills.",
+
+      features: [
+        "Live weather forecast",
+        "Shared Google Calendar integration",
+        "Front door security camera feed",
+        "Jellyfin server status and recently added movies & series",
+        "Garbage collection schedule",
+        "Tado smart thermostat temperatures",
+        "HomeWizard live electricity and gas usage",
+        "Responsive dashboard designed for a wall-mounted tablet",
+      ],
+
+      learnings:
+        "This project taught me how to integrate multiple external APIs into a single application and combine them into a cohesive user experience. Using Next.js API routes and asynchronous fetch requests, I periodically retrieve fresh data from services such as Google Calendar, Tado, HomeWizard, Jellyfin, and weather providers. On the client side, React's useEffect hook together with timed polling keeps the dashboard up to date without requiring a full page refresh. Beyond the technical side, I also spent a lot of time designing an interface that is both informative and easy to read at a glance. While this could have been achieved more quickly with Home Assistant, building it from scratch gave me a much deeper understanding of API integrations, state management, and creating a production-ready dashboard that I can extend with any service I choose.",
+    },
+  },
+
+  {
     slug: "guess-the-grade",
     title: "Guess the Grade",
     description:
